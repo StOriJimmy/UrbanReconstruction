@@ -23,7 +23,7 @@ CVector3D& CVector3D::operator*=(double u)
 }
 CVector3D& CVector3D::operator/=(double u)
 {	
-	if (abs(u) > 1e-10)
+	if (fabs(u) > 1e-10)
 	{pVec[0] /= u;		pVec[1] /= u;		pVec[2] /= u;}
 	return(*this);
 }
