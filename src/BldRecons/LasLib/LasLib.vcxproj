@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{051A36A2-8A79-41D7-A76C-99C7FDC64F04}</ProjectGuid>
+    <RootNamespace>LasLib</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27924.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Common\include;$(SolutionDir)\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Common\include;$(SolutionDir)\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Common\include;$(SolutionDir)\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Common\include;$(SolutionDir)\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\detail\file.cpp" />
+    <ClCompile Include="src\detail\reader.cpp" />
+    <ClCompile Include="src\detail\reader10.cpp" />
+    <ClCompile Include="src\detail\reader11.cpp" />
+    <ClCompile Include="src\detail\writer.cpp" />
+    <ClCompile Include="src\detail\writer10.cpp" />
+    <ClCompile Include="src\detail\writer11.cpp" />
+    <ClCompile Include="src\laserror.cpp" />
+    <ClCompile Include="src\lasfile.cpp" />
+    <ClCompile Include="src\lasheader.cpp" />
+    <ClCompile Include="src\laspoint.cpp" />
+    <ClCompile Include="src\lasreader.cpp" />
+    <ClCompile Include="src\lasrecordheader.cpp" />
+    <ClCompile Include="src\laswriter.cpp" />
+    <ClCompile Include="src\las_c_api.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Include\liblas\._cstdint.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\._exception.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\._laserror.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\._lasheader.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\._laspoint.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\._lasreader.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\._lasrecordheader.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\._liblas.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\cstdint.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\._endian.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\._file.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\._fwd.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\._reader11.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\._sha1.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\._sharedptr.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\._timer.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\._utility.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\endian.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\file.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\fwd.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\reader.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\reader10.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\reader11.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\sha1.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\sharedptr.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\timer.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\utility.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\writer.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\writer10.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\detail\writer11.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\exception.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\guid.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\iterator.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\laserror.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\lasfile.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\lasheader.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\laspoint.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\lasreader.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\lasrecordheader.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\laswriter.hpp" />
+    <ClInclude Include="..\Common\Include\liblas\liblas.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

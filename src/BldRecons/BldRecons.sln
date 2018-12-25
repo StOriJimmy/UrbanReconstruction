@@ -1,80 +1,43 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LASFinalize", "LASFinalize\LASFinalize.vcproj", "{9ED5AB81-AA96-4B91-9737-EF5646AAAFD8}"
-	ProjectSection(ProjectDependencies) = postProject
-		{913FAE18-5671-4836-9C80-2EE81C218ADE} = {913FAE18-5671-4836-9C80-2EE81C218ADE}
-		{051A36A2-8A79-41D7-A76C-99C7FDC64F04} = {051A36A2-8A79-41D7-A76C-99C7FDC64F04}
-	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPClassify", "SPClassify\SPClassify.vcproj", "{41B2ED00-6EF8-4002-A9CA-BBD34B957D87}"
-	ProjectSection(ProjectDependencies) = postProject
-		{913FAE18-5671-4836-9C80-2EE81C218ADE} = {913FAE18-5671-4836-9C80-2EE81C218ADE}
-	EndProjectSection
-EndProject
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8A58011C-13D2-47E2-922E-C97722481F9D}"
 	ProjectSection(SolutionItems) = preProject
 		config.ini = config.ini
 		README.txt = README.txt
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPA2LAS", "SPA2LAS\SPA2LAS.vcproj", "{5D38220A-0B6C-4A4F-A73D-08C13BA0794E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{913FAE18-5671-4836-9C80-2EE81C218ADE} = {913FAE18-5671-4836-9C80-2EE81C218ADE}
-		{051A36A2-8A79-41D7-A76C-99C7FDC64F04} = {051A36A2-8A79-41D7-A76C-99C7FDC64F04}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LASFinalize", "LASFinalize\LASFinalize.vcxproj", "{9ED5AB81-AA96-4B91-9737-EF5646AAAFD8}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPSplit", "SPSplit\SPSplit.vcproj", "{B47DF92C-383F-4177-9458-9F3E74AF817B}"
-	ProjectSection(ProjectDependencies) = postProject
-		{913FAE18-5671-4836-9C80-2EE81C218ADE} = {913FAE18-5671-4836-9C80-2EE81C218ADE}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPClassify", "SPClassify\SPClassify.vcxproj", "{41B2ED00-6EF8-4002-A9CA-BBD34B957D87}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LasLib", "LasLib\LasLib.vcproj", "{051A36A2-8A79-41D7-A76C-99C7FDC64F04}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPA2LAS", "SPA2LAS\SPA2LAS.vcxproj", "{5D38220A-0B6C-4A4F-A73D-08C13BA0794E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common", "Common\Common.vcproj", "{913FAE18-5671-4836-9C80-2EE81C218ADE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPSplit", "SPSplit\SPSplit.vcxproj", "{B47DF92C-383F-4177-9458-9F3E74AF817B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPB2LAS", "SPB2LAS\SPB2LAS.vcproj", "{32EC58E1-E01D-4258-90F3-3D3DABB85378}"
-	ProjectSection(ProjectDependencies) = postProject
-		{913FAE18-5671-4836-9C80-2EE81C218ADE} = {913FAE18-5671-4836-9C80-2EE81C218ADE}
-		{051A36A2-8A79-41D7-A76C-99C7FDC64F04} = {051A36A2-8A79-41D7-A76C-99C7FDC64F04}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LasLib", "LasLib\LasLib.vcxproj", "{051A36A2-8A79-41D7-A76C-99C7FDC64F04}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPB2OBJ", "SPB2OBJ\SPB2OBJ.vcproj", "{183A2CAC-8B07-4CCA-A8C9-223FA5A29569}"
-	ProjectSection(ProjectDependencies) = postProject
-		{913FAE18-5671-4836-9C80-2EE81C218ADE} = {913FAE18-5671-4836-9C80-2EE81C218ADE}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common", "Common\Common.vcxproj", "{913FAE18-5671-4836-9C80-2EE81C218ADE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPB2BP", "SPB2BP\SPB2BP.vcproj", "{D0DE7158-E13B-4DD0-B46B-4FCB1627D23E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{913FAE18-5671-4836-9C80-2EE81C218ADE} = {913FAE18-5671-4836-9C80-2EE81C218ADE}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPB2LAS", "SPB2LAS\SPB2LAS.vcxproj", "{32EC58E1-E01D-4258-90F3-3D3DABB85378}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BPFitPlane", "BPFitPlane\BPFitPlane.vcproj", "{B991BC20-5E28-41A7-9EE5-403F359AF45B}"
-	ProjectSection(ProjectDependencies) = postProject
-		{913FAE18-5671-4836-9C80-2EE81C218ADE} = {913FAE18-5671-4836-9C80-2EE81C218ADE}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPB2OBJ", "SPB2OBJ\SPB2OBJ.vcxproj", "{183A2CAC-8B07-4CCA-A8C9-223FA5A29569}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BPOHist", "BPOHist\BPOHist.vcproj", "{49F94F43-B716-4E9D-89D9-3E758D8D4FE4}"
-	ProjectSection(ProjectDependencies) = postProject
-		{913FAE18-5671-4836-9C80-2EE81C218ADE} = {913FAE18-5671-4836-9C80-2EE81C218ADE}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPB2BP", "SPB2BP\SPB2BP.vcxproj", "{D0DE7158-E13B-4DD0-B46B-4FCB1627D23E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BPO2SimpOBJ", "BPO2SimpOBJ\BPO2SimpOBJ.vcproj", "{0ED30B8A-C1D2-4873-9DE5-315F97E15C7A}"
-	ProjectSection(ProjectDependencies) = postProject
-		{913FAE18-5671-4836-9C80-2EE81C218ADE} = {913FAE18-5671-4836-9C80-2EE81C218ADE}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BPFitPlane", "BPFitPlane\BPFitPlane.vcxproj", "{B991BC20-5E28-41A7-9EE5-403F359AF45B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPInfo", "SPInfo\SPInfo.vcproj", "{5C58AB5C-9B69-4230-AAFA-315E5C1C4BC0}"
-	ProjectSection(ProjectDependencies) = postProject
-		{913FAE18-5671-4836-9C80-2EE81C218ADE} = {913FAE18-5671-4836-9C80-2EE81C218ADE}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BPOHist", "BPOHist\BPOHist.vcxproj", "{49F94F43-B716-4E9D-89D9-3E758D8D4FE4}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DualContouring", "DualContouring\DualContouring.vcproj", "{E11FE025-E081-4CEE-8092-5A53036943DD}"
-	ProjectSection(ProjectDependencies) = postProject
-		{913FAE18-5671-4836-9C80-2EE81C218ADE} = {913FAE18-5671-4836-9C80-2EE81C218ADE}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BPO2SimpOBJ", "BPO2SimpOBJ\BPO2SimpOBJ.vcxproj", "{0ED30B8A-C1D2-4873-9DE5-315F97E15C7A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "huma", "huma\huma.vcproj", "{8A58DFB4-ACDD-4DEE-AE89-2D2220B1DD8E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPInfo", "SPInfo\SPInfo.vcxproj", "{5C58AB5C-9B69-4230-AAFA-315E5C1C4BC0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DualContouring", "DualContouring\DualContouring.vcxproj", "{E11FE025-E081-4CEE-8092-5A53036943DD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "huma", "huma\huma.vcxproj", "{8A58DFB4-ACDD-4DEE-AE89-2D2220B1DD8E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bpo2obj", "bpo2obj\bpo2obj.vcproj", "{26DE581D-0472-4D46-9D64-19E58204E5BA}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -84,15 +47,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bpo2obj", "bpo2obj\bpo2obj.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "core", "..\..\core\core.vcproj", "{4A060BAE-BC9B-4B99-9321-A4385AF3FDA8}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BPO2UnSimpOBJ", "BPO2UnSimpOBJ\BPO2UnSimpOBJ.vcproj", "{345E8166-DF7B-4353-A75A-7EB69A79719A}"
-	ProjectSection(ProjectDependencies) = postProject
-		{913FAE18-5671-4836-9C80-2EE81C218ADE} = {913FAE18-5671-4836-9C80-2EE81C218ADE}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BPO2UnSimpOBJ", "BPO2UnSimpOBJ\BPO2UnSimpOBJ.vcxproj", "{345E8166-DF7B-4353-A75A-7EB69A79719A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ManifoldContouring", "ManifoldContouring\ManifoldContouring.vcproj", "{F816B448-58D8-4DB4-8C2D-61CA99D9EA03}"
-	ProjectSection(ProjectDependencies) = postProject
-		{913FAE18-5671-4836-9C80-2EE81C218ADE} = {913FAE18-5671-4836-9C80-2EE81C218ADE}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ManifoldContouring", "ManifoldContouring\ManifoldContouring.vcxproj", "{F816B448-58D8-4DB4-8C2D-61CA99D9EA03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -255,5 +212,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C82B7BC4-C4FC-4DB3-B6F4-8E1CCB898FC9}
 	EndGlobalSection
 EndGlobal
