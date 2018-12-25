@@ -2,7 +2,9 @@
 #include "FinalizeGrid.h"
 #include "ParamManager.h"
 
-#include "liblas\lasfile.hpp"
+//#include "liblas\lasfile.hpp"
+#include "liblas\liblas.hpp"
+#include "liblas\utility.hpp"
 using namespace liblas;
 
 CFinalizeGrid::CFinalizeGrid(void)
@@ -27,10 +29,17 @@ void CFinalizeGrid::ComputeBoundingBox()
 	for ( int i = 0; i < ( int )manager->m_vecInputFiles.size(); i++ ) {
 
 		fprintf_s( stderr, "Reading header of %s ... ", manager->m_vecInputFiles[ i ].name );
-		LASFile file( std::string( manager->m_vecInputFiles[ i ].name ) );
+  		
+  		std::ifstream ifs;
+  		if (!liblas::Open(ifs, manager->m_vecInputFiles[i].name)) {
+  			fprintf_s(stderr, "Cannot open %s for read.  Exiting...", manager->m_vecInputFiles[i].name);
+  			return;
+  		}
+		liblas::ReaderFactory f;
+ 		liblas::Reader reader = f.CreateWithStream(ifs);
 
-		const LASHeader & header = file.GetHeader();
-		double dbTemp[3];
+		const Header & header = reader.GetHeader();
+ 		double dbTemp[3];
 		dbTemp[0] = header.GetMinX() * manager->m_dbScale;
 		dbTemp[1] = header.GetMinY() * manager->m_dbScale;
 		dbTemp[2] = header.GetMinZ() * manager->m_dbScale;
@@ -42,6 +51,7 @@ void CFinalizeGrid::ComputeBoundingBox()
 
 		fprintf_s( stderr, "succeed!\n" );
 
+		ifs.close();
 	}
 
 	m_cBoundingBox.PrintInfo();
@@ -80,21 +90,27 @@ void CFinalizeGrid::Stream_ComputeGridIndex()
 	m_vecGridNumber.clear();
 	m_vecGridNumber.resize( m_nSideNumber * m_nSideNumber, 0 );
 	m_nPointNumber = 0;
-
 	for ( int i = 0; i < ( int )manager->m_vecInputFiles.size(); i++ ) {
 
 		fprintf_s( stderr, "Reading %s ...   0%%", manager->m_vecInputFiles[ i ].name );
 
-		LASFile file( std::string( manager->m_vecInputFiles[ i ].name ) );
+		std::ifstream ifs;
+		if (!liblas::Open(ifs, manager->m_vecInputFiles[i].name))
+		{
+			fprintf_s(stderr, "Cannot open %s for read.  Exiting...", manager->m_vecInputFiles[i].name);
+			return;
+		}
+		liblas::ReaderFactory f;
+		liblas::Reader reader = f.CreateWithStream(ifs);
 
-		const LASHeader & header = file.GetHeader();
-		LASReader & reader = file.GetReader();
+		const Header & header = reader.GetHeader();
+
 		double total = ( double )header.GetPointRecordsCount();
 		int prog = 0;
 		int num = 0;
 
 		while ( reader.ReadNextPoint() ) {
-			const LASPoint & point = reader.GetPoint();
+			const Point & point = reader.GetPoint();
 			if ( CheckPoint( point ) ) {
 				int idx = Index( CVector3D( point.GetX() * manager->m_dbScale, point.GetY() * manager->m_dbScale, point.GetZ() * manager->m_dbScale ) );
 				m_vecGridIndex[ idx ] = m_nPointNumber;
@@ -144,17 +160,24 @@ void CFinalizeGrid::Stream_WriteGrid()
 
 		fprintf_s( stderr, "Reading %s ...   0%%", manager->m_vecInputFiles[ i ].name );
 
-		LASFile file( std::string( manager->m_vecInputFiles[ i ].name ) );
+		std::ifstream ifs;
+		if (!liblas::Open(ifs, manager->m_vecInputFiles[i].name))
+		{
+			fprintf_s(stderr, "Cannot open %s for read.  Exiting...", manager->m_vecInputFiles[i].name);
+			return;
+		}
+		liblas::ReaderFactory f;
+		liblas::Reader reader = f.CreateWithStream(ifs);
 
-		const LASHeader & header = file.GetHeader();
-		LASReader & reader = file.GetReader();
+		const Header & header = reader.GetHeader();
+
 		double total = ( double )header.GetPointRecordsCount();
 		int prog = 0;
 		int num = 0;
 
 		while ( reader.ReadNextPoint() ) {
 
-			const LASPoint & point = reader.GetPoint();
+			const Point & point = reader.GetPoint();
 
 			if ( CheckPoint( point ) ) {
 				CVector3D v( point.GetX() * manager->m_dbScale, point.GetY() * manager->m_dbScale, point.GetZ() * manager->m_dbScale );
@@ -282,7 +305,7 @@ void CFinalizeGrid::WriteChunk( ChunkData * data, int index, int number )
 // auxiliary functions
 //////////////////////////////////////////////////////////////////////////
 
-bool CFinalizeGrid::CheckPoint( const LASPoint & point )
+bool CFinalizeGrid::CheckPoint( const Point & point )
 {
 	return true;
 }

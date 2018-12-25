@@ -2,7 +2,7 @@
 
 #include <vector>
 #include "Grid\StreamingGrid.h"
-#include "liblas\laspoint.hpp"
+#include "liblas\point.hpp"
 #include "Streaming\SPWriter.h"
 #include "Streaming\SPAWriter.h"
 #include "Streaming\SPBWriter.h"
@@ -29,7 +29,7 @@ public:
 
 protected:
 	void ComputeGridLength();
-	bool CheckPoint( const liblas::LASPoint & point );
+	bool CheckPoint( const liblas::Point & point );
 	void InitWrite();
 	void FinWrite();
 	void WriteChunk( ChunkData * data, int index, int number );
